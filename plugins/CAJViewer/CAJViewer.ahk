@@ -16,7 +16,7 @@
     vim.comment("<CAJViewer_Hand>", "手形工具")
     vim.comment("<CAJViewer_Select>", "选择文字")
 
-    vim.SetWin("CAJViewer", "Afx:01330000:8:00010003:00000000:0001132B")
+    vim.SetWin("CAJViewer", "Afx:01090000:8:00010003:00000000:0F020AA7")
 
     ; insert模式
     vim.mode("insert", "CAJViewer")
