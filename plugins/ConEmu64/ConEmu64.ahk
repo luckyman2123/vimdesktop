@@ -13,11 +13,10 @@
 
 return
 
-
 <ConEmu64_Paste>:
 	  ; MsgBox shift + ins
 	  Send, +{ins}
-	  Send, {Enter}
+	  ; Send, {Enter}
 return
 
 
