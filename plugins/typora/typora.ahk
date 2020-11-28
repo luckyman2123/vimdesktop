@@ -9,7 +9,8 @@
 
     vim.map("<esc>", "<Pass>", "typora")
     
-    vim.map("<F1>", "<typora_Paste>", "typora")
+    vim.map("<C-r>", "<typora_Red>", "typora")
+    vim.map("<C-y>", "<typora_Yellow>", "typora")
 
 return
 
@@ -19,9 +20,10 @@ return
 addFontColor(color)
 {
     clipboard := "" ; 清空剪切板
-    Send {ctrl down}c{ctrl up} ; 复制
+    Send {ctrl down}c{ctrl up} ; 复制    
     SendInput {TEXT}<font color='%color%'>
     SendInput {ctrl down}v{ctrl up} ; 粘贴
+    
     If(clipboard = ""){
         SendInput {TEXT}</font> ; Typora 在这不会自动补充
     }else{
@@ -29,8 +31,12 @@ addFontColor(color)
     }
 }
 
-<typora_Paste>:
-	  addFontColor("red")
+<typora_Red>:
+	  addFontColor("red")		; typora 需要在英文状态输入法下才能起到效果
+return
+
+<typora_Yellow>:
+	  addFontColor("yellow")		; typora 需要在英文状态输入法下才能起到效果
 return
 
 
